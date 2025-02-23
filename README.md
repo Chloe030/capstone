@@ -1,43 +1,27 @@
-<a name="top"></a>
-[![Abblix OIDC Server](https://resources.abblix.com/imgs/jpg/abblix-oidc-server-github-banner.jpg)](https://www.abblix.com/abblix-oidc-server)
-
-⭐ Star us on GitHub — it motivates us a lot!
-
-[![Share](https://img.shields.io/badge/share-000000?logo=x&logoColor=white)](https://x.com/intent/tweet?text=Check%20out%20this%20project%20on%20GitHub:%20https://github.com/Abblix/Oidc.Server%20%23OpenIDConnect%20%23Security%20%23Authentication)
-[![Share](https://img.shields.io/badge/share-1877F2?logo=facebook&logoColor=white)](https://www.facebook.com/sharer/sharer.php?u=https://github.com/Abblix/Oidc.Server)
-[![Share](https://img.shields.io/badge/share-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/Abblix/Oidc.Server)
-[![Share](https://img.shields.io/badge/share-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/submit?title=Check%20out%20this%20project%20on%20GitHub:%20https://github.com/Abblix/Oidc.Server)
-[![Share](https://img.shields.io/badge/share-0088CC?logo=telegram&logoColor=white)](https://t.me/share/url?url=https://github.com/Abblix/Oidc.Server&text=Check%20out%20this%20project%20on%20GitHub)
-
-🔥 Why OIDC Server is the best choice for authentication — find out in our [presentation](https://resources.abblix.com/pdf/abblix-oidc-server-presentation-eng.pdf) 📑
+# GameSeeker – A Personalized Game Recommendation Engine
 
 ## Table of Contents
-- [About](#-about)
-- [Certification](#-certification)
+- [Project Overview](#-project-overview)
+- [Problem Area](#-problem-area)
 - [How to Build](#-how-to-build)
 - [Documentation](#-documentation)
 - [Feedback and Contributions](#-feedback-and-contributions)
 - [License](#-license)
 - [Contacts](#%EF%B8%8F-contacts)
 
-## 🚀 About
+## 🚀 Project Overview
 
-**Abblix OIDC Server** is a .NET library designed to provide comprehensive support for OAuth2 and OpenID Connect on the server side. It adheres to high standards of flexibility, reusability, and reliability, utilizing well-known software design patterns, including modular and hexagonal architectures. These patterns ensure the following benefits:
+The Game Recommendation System project aims to create a personalized recommendation engine for digital video game marketplaces like Steam, Epic Games Store, and PlayStation Store. With millions of games available, it’s difficult for players to discover games that match their unique preferences. The goal of this project is to build a recommendation system that goes beyond popularity-based suggestions, offering personalized recommendations tailored to each player’s preferences, such as art style, story, gameplay mechanics, and challenge level.
 
-- **Modularity**: Different parts of the library can function independently, enhancing the library's modularity and allowing for easier maintenance and updates.
-- **Testability**: Improved separation of concerns makes the code more testable.
-- **Maintainability**: Clear structure and separation facilitate better management of the codebase.
+This project will explore and analyze user behavior data, apply data science techniques like collaborative filtering and content-based filtering, and use machine learning to recommend games.
 
-The library also supports Dependency Injection through the standard .NET DI container, aiding in the organization and management of code. Specifically tailored for seamless integration with ASP.NET WebApi, Abblix OIDC Server employs standard controller classes, binding, and routing mechanisms, simplifying the integration of OpenID Connect into your services.
+## 🎓 Problem Area
 
-## 🎓 Certification
+With the increasing number of games on digital marketplaces, recommending the right game to the right player has become a challenge. Current recommendation systems often suggest the most popular games, overlooking niche or lesser-known titles that might be a better fit for the player.
 
-[![OpenID_Foundation_Certification](https://resources.abblix.com/imgs/svg/abblix-oidc-server-openid-foundation-certification-mark.svg)](https://openid.net/certification/#OPENID-OP-P)
-
-We are certified in all profiles. During the certification process, we skipped ZERO tests and received NO warnings. All **630** tests ![Passed](https://img.shields.io/badge/PASSED-brightgreen). We are extremely proud of this achievement. It reflects our overall approach to any endeavor. For more details, click the links ([Certified OpenID Providers & Profiles](https://openid.net/certification/#OPENID-OP-P), [Certified OpenID Providers for Logout Profiles](https://openid.net/certification/#OPENID-OP-LP)).
-
-For convenience, the certification information is provided in the tables below:
-
+- Users: Often overwhelmed by the number of games.
+- Developers: Struggle to reach their target audience, especially indie developers.
+- Platforms: Face difficulties in increasing user engagement and driving sales for lesser-known games.
 ### Regular Profiles
 |OIDC Profile|Response Types (links to official OpenID Foundation test results)|Tests|
 |:-|:-|:-|
