@@ -1,15 +1,16 @@
 # GameSeeker – A Personalized Game Recommendation Engine
 
 ## Table of Contents
-- [Project Overview](#-project-overview)
-- [Problem Area](#-problem-area)
-- [Proposed Data Science Approach](#-proposed-data-science-approach)
-- [Impact of the Solution](#-impact-of-the-solution)
-- [Datasets Overview/Concerns/EDA Findings](#-datasets-overview/concerns/eda-findings)
-- [Next Step](#-next-step)
-- [Sprint 2: Game Purchase Behavior Prediction and Recommendation](#sprint-2-game-purchase-behavior-prediction-and-recommendation)
+- [Project Overview](#project-overview)
+- [Problem Area](#problem-area)
+- [Proposed Data Science Approach](#proposed-data-science-approach)
+- [Impact of the Solution](#impact-of-the-solution)
+- [Datasets and Preprocessing](#datasets-and-preprocessing)
+- [EDA Findings](#eda-findings)
+- [Modeling and Evaluation](#modeling-and-evaluation)
+- [Hybrid Recommendation System](#hybrid-recommendation-system)
+- [Conclusion and Future Work](#conclusion-and-future-work)
 - [Project Organization](#project-organization)
-- [Credits & References](#credits-references)
 
 ## 🚀 Project Overview
 
@@ -85,57 +86,43 @@ The process involved merging these datasets based on the game title (Name) to an
 After merging, I conducted Exploratory Data Analysis (EDA) to identify key trends and patterns in the data. I created various visualizations to help understand the relationships between user behavior (playtime, purchases) and sales figures (global sales, region sales).
 
 ---
+## 🤖 Modeling and Evaluation
 
-## 🕹️ **Sprint 2**
+### 🎯 Classification Models:
+We built multiple classifiers to predict if a user will purchase a game:
 
-### **Executive Summary**:
-Understanding user engagement and purchasing behavior is critical for personalized game recommendation systems.  
-In this sprint, we focused on building a model to **predict whether a user will purchase a game** based on features like price, playtime, and genre.
+| Model             | Accuracy | Precision | Recall | F1 Score | ROC AUC |
+|------------------|----------|-----------|--------|----------|---------|
+| Logistic Reg.     | 0.90     | 0.85      | 1.00   | 0.92     | 0.87    |
+| Decision Tree     | 0.996    | 0.993     | 1.00   | 0.996    | 0.996   |
+| Random Forest ✅  | 0.996    | 0.993     | 1.00   | 0.996    | 0.996   |
 
-**Key takeaways**:
-- Genre plays a significant role in user purchasing decisions.
-- Price alone isn't a strong predictor of purchase.
-- Basic features yield strong baseline model performance, offering significant potential for personalization.
+Random Forest was selected for its strong generalization and interpretability.
 
-### **Demo**:
-**Work in progress.** Future demo plans include:
-- Visualizing genre engagement and purchasing trends.
-- Interactive prototype based on user purchases and playtime behavior.
+## 🔀 Hybrid Recommendation System
 
-### **Methodology**:
-- **Data Collection**:
-  - Merged user interaction data (Steam-200k) with game sales (Sales) and game metadata (SteamSpy).
-- **Data Preprocessing**:
-  - Standardized column names, handled missing values (median/mode), one-hot encoded genres (will do in the future modeling).
-  - Converted pricing to numeric values and aggregated user interaction by game.
-- **Exploratory Data Analysis (EDA)**:
-  - Visualized genre popularity and purchase rates.
-  - Analyzed relationships between price, reviews, and user engagement.
-- **Baseline Modeling**:
-  - Trained a logistic regression model using price, playtime, and genre features.
-  - Achieved 90% accuracy, 85% precision, 100% recall, and 0.87 AUC.
+To make personalized game suggestions, we implemented a **hybrid recommender**:
 
-### **Next Steps**:
-- Expand feature set (e.g., user engagement depth).
-- Explore item-item collaborative filtering for personalized recommendations.
-- Experiment with ensemble models like Random Forest or XGBoost for improved precision.
+**How it works:**
+- Calculates content similarity between games using genre, price, and playtime (cosine similarity)
+- Computes user similarity using collaborative filtering (Truncated SVD + cosine similarity)
+- Blends both scores using an adjustable parameter α (e.g. 0.6 for content-heavy)
 
----
+**Example Output:**
+Top 5 games recommended for a user based on their history and similar users. Final scores are a combination of content and peer patterns.
 
-## 📃 Next Steps
+## ✅ Conclusion and Future Work
 
-Based on the findings and progress made during Sprint 2, the following steps will be undertaken to refine the data, improve the recommendation system, and prepare the model for future sprints:
+**Accomplishments:**
+- Built a strong classifier to predict game purchases
+- Developed a working hybrid recommender with visualization
+- Demonstrated improvement over popularity-based recommendations
 
-1. **Data Processing**:
-   - Explore cluster-based imputation or domain-specific imputation methods to improve accuracy, especially for missing values.
-   - Treat outliers in sales and ratings.
-2. **Feature Engineering**:
-   - Create genre-based features to help identify preferences for specific genres in the recommendation system.
-3. **Model Development**:
-   - Build the first version of collaborative filtering and content-based filtering models.
-   - Apply TF-IDF for NLP to represent text data numerically.
+**Next Steps:**
+- Incorporate user review sentiment using TF-IDF and NLP
+- Expand collaborative filtering to item-based or deep learning approaches
+- Deploy as a web app using Streamlit or Flask
 
----
 
 ## 📁 Project Organization
 
@@ -144,4 +131,4 @@ The repository is organized as follows:
 - **`model/`**: Contains trained baseline models and future item-item models.
 - **`notebooks/`**: Contains Jupyter notebooks for Sprint 1 and Sprint 2.
 - **`docs/`**: Contains presentation slides summarizing the project's findings and models.
-- **`references/`**:
+- **`repolink`**:https://github.com/Chloe030/capstone.git
