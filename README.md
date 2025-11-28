@@ -16,7 +16,24 @@ The goal is to help players discover games based on **their personal preferences
 - Preprocessed and cleaned datasets for future hybrid recommendation blending.
 
 ## 📁 Repository Structure  
-(This is the structure you already wrote; keep it exactly as you like)
+capstone/
+│
+├── data/
+│ ├── raw/ # Original datasets (not uploaded due to size)
+│ └── processed/ # Cleaned / merged / feature-engineered data
+│
+├── notebooks/
+│ ├── 01_EDA.ipynb # Exploratory data analysis
+│ ├── 02_Preprocessing.ipynb # Data cleaning & feature engineering
+│ └── 03_Modeling.ipynb # ML models & evaluation
+│
+├── docs/
+│ └── summary/ # Slides, reports, or presentation notes
+│
+├── src/ (optional) # Python scripts (if you later modularize)
+│
+├── README.md # Main project documentation
+└── .gitignore # Ignore large or private files
 
 ## 🛠️ Tools  
 - Python, Pandas, NumPy  
