@@ -1,5 +1,33 @@
 # GameSeeker – A Personalized Game Recommendation Engine
 
+A data science project focused on building a personalized video game recommendation engine.  
+The goal is to help players discover games based on **their personal preferences**, not just popularity rankings.
+
+## 🚀 What This Project Does
+- Builds personalized recommendations using content-based + collaborative filtering.
+- Analyzes player preferences using EDA, ratings, tags, genres, and gameplay features.
+- Tests machine learning models including Logistic Regression, Decision Tree, Random Forest.
+- Prepares data for a hybrid recommendation pipeline.
+
+## 📊 Key Insights / Results (High-level)
+- Identified which player features most strongly influence game preferences.
+- Explored patterns in age, gender, workout (interest categories), frequency, etc.
+- Built baseline models for classification.
+- Preprocessed and cleaned datasets for future hybrid recommendation blending.
+
+## 📁 Repository Structure  
+(This is the structure you already wrote; keep it exactly as you like)
+
+## 🛠️ Tools  
+- Python, Pandas, NumPy  
+- Scikit-learn, Matplotlib, Seaborn  
+- Jupyter Notebook  
+- Recommendation system concepts  
+
+---
+
+## 📌 Original Notes & Detailed Workflow  
+---
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Problem Area](#problem-area)
