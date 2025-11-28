@@ -38,6 +38,7 @@ capstone/
 │
 ├── .gitignore                     # Ignore data / large files
 └── README.md                      # Main documentation (this file)
+```
 
 ## 🛠️ Tools  
 - Python, Pandas, NumPy  
