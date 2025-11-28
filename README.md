@@ -17,23 +17,26 @@ The goal is to help players discover games based on **their personal preferences
 
 ## 📁 Repository Structure  
 capstone/
+├── data/ # Datasets (SteamSpy, game sales, steam-200k)
+│ ├── SteamSpy - All the data and stats.csv
+│ ├── Video_Games_Sales_as_at_22_Dec_2016.csv
+│ └── steam-200k.csv
 │
-├── data/
-│ ├── raw/ # Original datasets (not uploaded due to size)
-│ └── processed/ # Cleaned / merged / feature-engineered data
+├── doc/ # Project presentations from different sprints
+│ ├── Presentation1.pdf
+│ ├── Presentation 2.pdf
+│ └── presentation3.pdf
 │
-├── notebooks/
-│ ├── 01_EDA.ipynb # Exploratory data analysis
-│ ├── 02_Preprocessing.ipynb # Data cleaning & feature engineering
-│ └── 03_Modeling.ipynb # ML models & evaluation
+├── docs/ # Documentation assets
+│ └── images/ # Images used for slides or README
 │
-├── docs/
-│ └── summary/ # Slides, reports, or presentation notes
+├── notebooks/ # Jupyter notebooks for each sprint
+│ ├── Sprint1notbook.ipynb
+│ ├── Sprint2Notebook.ipynb
+│ └── Sprint 3 Notebook.ipynb
 │
-├── src/ (optional) # Python scripts (if you later modularize)
-│
-├── README.md # Main project documentation
-└── .gitignore # Ignore large or private files
+├── .gitignore # Ignore data / large files
+└── README.md # Main documentation (this file)
 
 ## 🛠️ Tools  
 - Python, Pandas, NumPy  
