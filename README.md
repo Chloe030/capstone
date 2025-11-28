@@ -16,27 +16,28 @@ The goal is to help players discover games based on **their personal preferences
 - Preprocessed and cleaned datasets for future hybrid recommendation blending.
 
 ## 📁 Repository Structure  
+```text
 capstone/
-├── data/ # Datasets (SteamSpy, game sales, steam-200k)
-│ ├── SteamSpy - All the data and stats.csv
-│ ├── Video_Games_Sales_as_at_22_Dec_2016.csv
-│ └── steam-200k.csv
+├── data/                          # Datasets (SteamSpy, game sales, steam-200k)
+│   ├── SteamSpy - All the data and stats.csv
+│   ├── Video_Games_Sales_as_at_22_Dec_2016.csv
+│   └── steam-200k.csv
 │
-├── doc/ # Project presentations from different sprints
-│ ├── Presentation1.pdf
-│ ├── Presentation 2.pdf
-│ └── presentation3.pdf
+├── doc/                           # Project presentations from different sprints
+│   ├── Presentation1.pdf
+│   ├── Presentation 2.pdf
+│   └── presentation3.pdf
 │
-├── docs/ # Documentation assets
-│ └── images/ # Images used for slides or README
+├── docs/                          # Documentation assets
+│   └── images/                    # Images used for slides or README
 │
-├── notebooks/ # Jupyter notebooks for each sprint
-│ ├── Sprint1notbook.ipynb
-│ ├── Sprint2Notebook.ipynb
-│ └── Sprint 3 Notebook.ipynb
+├── notebooks/                     # Jupyter notebooks for each sprint
+│   ├── Sprint1notbook.ipynb
+│   ├── Sprint2Notebook.ipynb
+│   └── Sprint 3 Notebook.ipynb
 │
-├── .gitignore # Ignore data / large files
-└── README.md # Main documentation (this file)
+├── .gitignore                     # Ignore data / large files
+└── README.md                      # Main documentation (this file)
 
 ## 🛠️ Tools  
 - Python, Pandas, NumPy  
